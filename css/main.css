@@ -7,3 +7,16 @@
 	margin: auto, 0; 
 	max-width: 1000px;
 }
+
+#hotcold{
+	display: none;
+}
+#hotcoldy{
+	display: none;
+}
+
+#winnerModal{
+	width:'auto',
+    height:'auto', 
+    'max-height':'100%'
+}

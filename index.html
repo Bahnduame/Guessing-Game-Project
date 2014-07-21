@@ -24,21 +24,46 @@
  
     <!-- Body of web page goes inside container tags -->
     <div class="container"> 
+
+      <div class="modal fade" id="winnerModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title">You've Won!</h4>
+            </div>
+            <div class="modal-body">
+              <img src="winner.jpg" height="241px" width="321px">
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
      	<div id="inputrow" class="row">
      		<div class="col-xs-2">
-				<input type="text" class="form-control" placeholder="Guess a number!">
+				<input type="text" class="form-control guessinput" placeholder="Guess a number!">
      		</div>
   			<div class="col-md-1">
-  				<button type="button" class="btn btn-success">Guess</button>
+  				<button type="button" class="btn btn-success guessbtn">Guess</button>
   			</div>
     	</div>
-    	<div id= "btnrow" class="row" style="padding-top:30px"> 
+    	<div id= "hotcold" class="row" style="padding-top:30px"> 
+        <p id="hotcoldx"></p>
+        <p id="hotcoldy"></p>
+      </div>
+      <div id= "btnrow" class="row" style="padding-top:30px"> 
 	  		<div class="btn-group">
-	 			<button type="button" class="btn btn-default">New Game</button>
-	  			<button type="button" class="btn btn-danger">Gimme da' answer</button>
+	 			<button type="button" class="btn btn-default newbtn">New Game</button>
+	  			<button type="button" class="btn btn-danger answerbtn">Gimme da' answer</button>
 			</div>
-		</div>	
- 		
+		</div>
+    <div id= "countdown" class="row" style="padding-top:30px"> 
+        <p>5 guesses remaining</p>
+    </div>
+
+    <div id= "prevguesses" class="row" style="padding-top:30px"> 
+    </div>   		
+    
     </div> <!-- /container -->
  
     <!-- Put just before closing body tag so pages load faster -->
@@ -47,7 +72,6 @@
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <!-- Obtain Bootstrap javascript library from CDN (online service) so it doesn't have to be on my machine -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
- 
- 
+    <script src="game.js"></script>
   </body>
 </html>
